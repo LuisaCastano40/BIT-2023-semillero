@@ -1,3 +1,9 @@
 body{
     background-color: aqua;
 }
+
+h1{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    color: gray;
+    font-size: 200px;
+}
