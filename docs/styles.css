@@ -1,9 +1,59 @@
-body{
-    background-color: aqua;
+*{
+    margin: 0;
+    padding: 0;
 }
-
-h1{
-    font-family: 'Arial Narrow', Arial, sans-serif;
-    color: gray;
-    font-size: 200px;
+body{
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.header-simulator{
+    width: 100%;
+}
+.container-cards{
+    border: solid red;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+}
+.cards{
+    border: solid green;
+    width: 50%;
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+}
+.cards img{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px purple;
+}
+.cardscontent{
+    position: absolute;
+    top: 0;
+}
+.btn div{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 12%;
+    right: 8%;
+    font-size: 40px;
+    border: solid purple 2px;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn div:hover{
+    cursor: pointer;
+}
+.meGusta{
+    display: block;
+}
+.noMegusta{
+    display: none;
 }
