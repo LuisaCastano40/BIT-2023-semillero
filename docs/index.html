@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +10,194 @@
     <!-- Link para íconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>Prueba</title>
+    <title> Desarrollo web | Semillero BIT </title>
 </head>
 <body>
-    <img class="header-simulator" src="assets/Banner/Banner1.jpg" alt="prueba">
+  
+    <!-- Inicio del header de la página -->
+    <header>
 
-    <section class="container-cards">
-        <article class="cards">
-            <img  src="assets/Captura.PNG" alt="prueba">
-            
-            <button class="btn">
-                <div class="noMegusta">
-                    <i class='bx bx-heart' id="icon1"></i>
+        <!-- Inicio barra de navegación -->
+        <nav class="container-navBar" id="inicio">
+            <ul>
+                <li><a href="#proyecto">PROYECTO</a></li>
+                <li>
+                    <div class="container-logo">
+                        <a href="#inicio"><img src="assets/Logo/Logo.svg" alt="logo-lv"></a>
+                    </div>
+                </li>
+                <li><a href="#sobremi">SOBRE MÍ</a></li>
+            </ul>
+
+            <div class="container-decoration">
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        
+        <!-- Fin de la barra de navegación -->
+
+        <!-- Inicio banner -->
+        <section class="container-banner">
+
+            <article class="decoration-baner">
+                <div class="baner-deco1"></div>
+                <div class="baner-deco2"></div>
+                <div class="baner-deco3"></div>
+                <div class="baner-deco4"></div>
+            </article>
+
+            <article class="container-decoLetras">
+                <span class="letraW">W</span>
+                <span class="letraE">E</span>
+                <span class="letraB">B</span>
+                <span class="letraD">D</span>
+                <span class="letraE2">E</span>
+                <span class="letraV">V</span>
+            </article>
+
+            <article class="container-bannerImage">
+                <img class="baner-image" src="assets/Banner/BannerImage.png" alt="banner-lv">
+                <button class="btn-add">
+                    <img src="assets/icons/IconPlus.svg" alt="Add-card">
+                    <span>ADD</span>
+                </button>
+            </article>
+        </section>
+        <!-- Fin banner -->
+
+    </header>
+    <!-- Fin del header de la página -->
+
+    <!-- Inicio del contenido de la página -->
+    <main>
+
+        <section class="container-main" id="proyecto">
+
+            <!-- Inicio Buscador -->
+            <form class="container-buscador">
+                <input type="text" id="search" name="search" placeholder="Buscar...">
+                <img src="assets/icons/IconFind.svg" alt="Icon-find">
+            </form>
+            <!-- Fin Buscador -->
+
+            <!-- Inicio categorías -->
+            <article class="container-categories">
+                <h2>Categorías</h2>
+
+                <article class="categories">
+                    <div class="categories--categorie">
+                        <img src="assets/icons/IconInternet.svg" alt="iconohtml">
+                    </div>
+                    <div class="categories--categorie">
+                        <img src="assets/icons/IconPlus.svg" alt="iconoPlus">
+                    </div>
+                </article>
+
+            </article>
+            <!-- Fin categorías -->
+
+            <!-- Inicio cards de preguntas -->
+            <article class="container-cards">
+                <div class="cardPregunta">
+                    <div class="container-pregunta">
+                        <div class="card-Image">
+                            <img src="assets/images/img1.PNG" alt="images-card">
+                        </div>
+                        <div class="card-Pregunta">
+                            <span>CATEGORIA</span>
+                            <h3>Pregunta: Lorem ipsum, dolor sit amet consectetur.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit vero quae. Error consequuntur eligendi nostrum ratione velit nobis eos?</p>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-agregar">
+                        AGREGAR PREGUNTA
+                        <img src="assets/icons/IconAdd.svg" alt="iconoAdd">
+                    </button>
                 </div>
-                <div class="megusta">
-                    <i class='bx bxs-heart bx-burst-hover' id="icon2"></i>
+                <div class="cardPregunta">
+                    <div class="container-pregunta">
+                        <div class="card-Image">
+                            <img src="assets/images/img1.PNG" alt="images-card">
+                        </div>
+                        <div class="card-Pregunta">
+                            <span>CATEGORIA</span>
+                            <h3>Pregunta: Lorem ipsum, dolor sit amet consectetur.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit vero quae. Error consequuntur eligendi nostrum ratione velit nobis eos?</p>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-agregar">
+                        AGREGAR PREGUNTA
+                        <img src="assets/icons/IconAdd.svg" alt="iconoAdd">
+                    </button>
                 </div>
-            </button>
-        </article>
-    </section>
-    <script src="dinamico.js"></script>
+                <div class="cardPregunta">
+                    <div class="container-pregunta">
+                        <div class="card-Image">
+                            <img src="assets/images/img1.PNG" alt="images-card">
+                        </div>
+                        <div class="card-Pregunta">
+                            <span>CATEGORIA</span>
+                            <h3>Pregunta: Lorem ipsum, dolor sit amet consectetur.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit vero quae. Error consequuntur eligendi nostrum ratione velit nobis eos?</p>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-agregar">
+                        AGREGAR PREGUNTA
+                        <img src="assets/icons/IconAdd.svg" alt="iconoAdd">
+                    </button>
+                </div>
+
+                
+            </article>
+            <!-- Fin cards de preguntas -->
+
+        </section>
+    </main>
+    <!-- Fin del contenido de la página -->
+
+    <!-- Inicio pie de página -->
+    <footer>
+        <section class="container-footer">
+
+            <article class="logo">
+                <img src="assets/Logo/Logo.svg" alt="logo-lv">
+                <div class="container-decoration">
+                    <span></span>
+                    <span></span>
+                </div>
+            </article>
+            <article class="sobremí" id="sobremi">
+                <div class="container-contacto">
+                    <div class="whatasapp">
+                        <img src="assets/icons/IconWhatsapp.svg" alt="whatasapp-icon">
+                        <p>+57 319 497 0214</p>
+                    </div>
+                    <div class="correo">
+                        <img src="assets/icons/iIconGmail.svg" alt="gmail-icon">
+                        <p>loise.0607@gmail.com</p>
+                    </div>
+                </div>
+                <div class="container-botones">
+                    <button class="btn-portafolio">
+                        <p>PORTAFOLIO</p>
+                    </button>
+                    <button class="btn-curriculum">
+                        <P>HOJA DE VIDA</P>
+                    </button>
+                </div>
+            </article>
+
+        </section>
+        <section class="copyright">
+            <p>© Copyright 2023, creado por Luisa Fernanda Castaño Vanegas, iconos tomados de https://icons8.com/ </p>
+        </section>
+    </footer>
+    <!-- Fin pie de página -->
+
 </body>
 </html>
