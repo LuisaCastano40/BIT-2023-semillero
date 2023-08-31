@@ -61,7 +61,7 @@
                 <img class="baner-image" src="assets/Banner/BannerImage.png" alt="banner-lv">
                 <button class="btn-add">
                     <img src="assets/icons/IconPlus.svg" alt="Add-card">
-                    <span>ADD</span>
+                    <span>ADD</span>  
                 </button>
             </article>
         </section>
@@ -98,63 +98,32 @@
             </article>
             <!-- Fin categorías -->
 
-            <!-- Inicio cards de preguntas -->
-            <article class="container-cards">
-                <div class="cardPregunta">
-                    <div class="container-pregunta">
-                        <div class="card-Image">
-                            <img src="assets/images/img1.PNG" alt="images-card">
-                        </div>
-                        <div class="card-Pregunta">
-                            <span>CATEGORIA</span>
-                            <h3>Pregunta: Lorem ipsum, dolor sit amet consectetur.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit vero quae. Error consequuntur eligendi nostrum ratione velit nobis eos?</p>
-                        </div>
-                    </div>
-                    
-                    <button class="btn-agregar">
-                        AGREGAR PREGUNTA
-                        <img src="assets/icons/IconAdd.svg" alt="iconoAdd">
-                    </button>
-                </div>
-                <div class="cardPregunta">
-                    <div class="container-pregunta">
-                        <div class="card-Image">
-                            <img src="assets/images/img1.PNG" alt="images-card">
-                        </div>
-                        <div class="card-Pregunta">
-                            <span>CATEGORIA</span>
-                            <h3>Pregunta: Lorem ipsum, dolor sit amet consectetur.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit vero quae. Error consequuntur eligendi nostrum ratione velit nobis eos?</p>
-                        </div>
-                    </div>
-                    
-                    <button class="btn-agregar">
-                        AGREGAR PREGUNTA
-                        <img src="assets/icons/IconAdd.svg" alt="iconoAdd">
-                    </button>
-                </div>
-                <div class="cardPregunta">
-                    <div class="container-pregunta">
-                        <div class="card-Image">
-                            <img src="assets/images/img1.PNG" alt="images-card">
-                        </div>
-                        <div class="card-Pregunta">
-                            <span>CATEGORIA</span>
-                            <h3>Pregunta: Lorem ipsum, dolor sit amet consectetur.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit vero quae. Error consequuntur eligendi nostrum ratione velit nobis eos?</p>
-                        </div>
-                    </div>
-                    
-                    <button class="btn-agregar">
-                        AGREGAR PREGUNTA
-                        <img src="assets/icons/IconAdd.svg" alt="iconoAdd">
-                    </button>
-                </div>
+            <!-- Pedir información para cards -->
+            <section class="formularioCard">
+                <form id="cardForm">
+                    <label for="image">Imagen</label>
+                    <input type="file" id="image">
+                    <label for="">categoría</label>
+                    <input type="text" id="categorie">
+                    <label for="">pregunta</label>
+                    <input type="text" id="question">
+                    <label for="">descripción</label>
+                    <input type="text" id="answer">
+                    <button type="submit">Add Card</button>
+                </form>
+            </section>
 
-                
+            <!-- Inicio cards de preguntas -->
+            <article class="container-cards" id="cardsContainer">
             </article>
             <!-- Fin cards de preguntas -->
+
+            <article class="container-btnAdd">
+                <button class="btn-agregar">
+                    AGREGAR PREGUNTA
+                    <img src="assets/icons/IconAdd.svg" alt="iconoAdd">
+                </button>
+            </article>
 
         </section>
     </main>
@@ -199,5 +168,6 @@
     </footer>
     <!-- Fin pie de página -->
 
+    <script src="script.js"></script>
 </body>
 </html>
