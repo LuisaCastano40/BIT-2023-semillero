@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link css -->
+    <link rel="stylesheet" href="web-storage.css">
+
+    <title>Web storage</title>
+</head>
+<body>
+    <h1>Web storage</h1>
+
+    <section class="formulario">
+        <h2>Formulario de Login</h2>
+        <form id="form">
+            <div>
+                <label>Nombre de usuario</label>
+                <input type="text" id="usuario">
+            </div>
+    
+            <div>
+                <label>contraseña</label>
+                <input type="password" id="pasword">
+            </div>
+    
+            <button type="submit" id="btn">Ingresar</button>
+        </form>
+    </section>
+
+    <section class="listaDeaprobacion" id="list">
+        <ul id="list"></ul>
+    </section>
+    <section class="desaprobado">
+        <p>Ups! no tienes acceso</p>
+    </section>
+    <span class="loader d-none" id="loader"></span>
+
+    <script src="web-storage.js"></script>
+</body>
+</html>

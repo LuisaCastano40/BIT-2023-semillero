@@ -59,10 +59,6 @@
 
             <article class="container-bannerImage">
                 <img class="baner-image" src="assets/Banner/BannerImage.png" alt="banner-lv">
-                <button class="btn-add">
-                    <img src="assets/icons/IconPlus.svg" alt="Add-card">
-                    <span>ADD</span>  
-                </button>
             </article>
         </section>
         <!-- Fin banner -->
@@ -88,10 +84,22 @@
 
                 <article class="categories">
                     <div class="categories--categorie">
-                        <img src="assets/icons/IconInternet.svg" alt="iconohtml">
+                        <img src="assets/icons/IconInternet.svg" alt="iconoWeb">
                     </div>
                     <div class="categories--categorie">
-                        <img src="assets/icons/IconPlus.svg" alt="iconoPlus">
+                        <img src="assets/icons/IconGit.svg" alt="iconoGit">
+                    </div>
+                    <div class="categories--categorie">
+                        <img src="assets/icons/IconHtml.svg" alt="iconoHtml">
+                    </div>
+                    <div class="categories--categorie">
+                        <img src="assets/icons/cssIcon.svg" alt="iconoCss">
+                    </div>
+                    <div class="categories--categorie">
+                        <img src="assets/icons/IconJs.svg" alt="iconoCss">
+                    </div>
+                    <div class="categories--categorie">
+                        <img src="assets/icons/IconPlus.svg" alt="iconoAll">
                     </div>
                 </article>
 
@@ -99,17 +107,24 @@
             <!-- Fin categorías -->
 
             <!-- Pedir información para cards -->
-            <section class="formularioCard">
-                <form id="cardForm">
-                    <label for="image">Imagen</label>
-                    <input type="file" id="image">
-                    <label for="">categoría</label>
-                    <input type="text" id="categorie">
-                    <label for="">pregunta</label>
-                    <input type="text" id="question">
-                    <label for="">descripción</label>
-                    <input type="text" id="answer">
-                    <button type="submit">Add Card</button>
+            <section class="formularioCard d-content" id="containerForm">
+
+                <form class="cardForm" id="cardForm">
+                    <div class="closeIcon">
+                        <i class='bx bx-x' id="closeForm"></i>
+                    </div>
+
+                    <div class="container-imageUp">
+                        <i class='bx bx-cloud-upload'></i>
+                        <label for="image">Subir imagen</label>
+                        <input type="file" id="image">
+                    </div>
+                    
+                    <input type="text" placeholder="Categoría" id="categorie">
+                    <input type="text" id="question" placeholder="Pregunta">
+                    <textarea  id="answer" placeholder="Respuesta" class="texTareaForm"></textarea>
+                    <button class="btnForm" type="submit">Añadir tarjeta</button>
+
                 </form>
             </section>
 
