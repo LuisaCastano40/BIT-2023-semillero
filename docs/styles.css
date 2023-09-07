@@ -301,7 +301,7 @@ body::-webkit-scrollbar-track {
 }
 .cardForm{
     width: 60%;
-    height: 70%;
+    height: 60%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -324,32 +324,7 @@ body::-webkit-scrollbar-track {
     color: var(--colorEnfasisFuerte);
     cursor: pointer;
 }
-.container-imageUp{
-    width: 300px;
-    height: 40px;
-    border: 2px solid var(--colorEnfasis);
-    border-radius: 5px;
-    background-color: var(--colorEnfasis);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: white;
-    font-size: 18px;
-    box-shadow: var(--shadow);
-}
-.container-imageUp:hover{
-    box-shadow: var(--shadow2);
-}
-.container-imageUp i{
-    font-size: 30px;
-}
-#image{
-    display: none;
-}
-.cardForm label{  
-    cursor: pointer;
-}
+
 .cardForm input{
     width: 65%;
     padding: 10px 30px;
@@ -394,7 +369,6 @@ body::-webkit-scrollbar-track {
 
 .container-cards{
     width: 90%;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -405,7 +379,6 @@ body::-webkit-scrollbar-track {
 }
 .cardPregunta{
     width: 30%;
-    /* height: 470px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -414,7 +387,7 @@ body::-webkit-scrollbar-track {
 }
 .container-pregunta{
     width: 100%;
-    height: 100%;
+    min-height: 360px;
     border: solid 2px rgb(226, 226, 226);
     box-shadow: var(--shadow);
     box-sizing: border-box;
@@ -491,7 +464,7 @@ body::-webkit-scrollbar-track {
 /* Botón agregar */
 .container-btnAdd{
     width: 45%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .btn-agregar{
     width: 100%;
@@ -518,6 +491,39 @@ body::-webkit-scrollbar-track {
     filter: invert(93%) sepia(0%) saturate(0%) hue-rotate(227deg) brightness(107%) contrast(102%);
 }
 
+/* Paginación */
+.container-pagination{
+    width: 100%;
+    margin-bottom: 100px;
+}
+.listPage{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.listPage li{
+    width: 35px;
+    height: 35px;
+    border: solid var(--colorEnfasisFuerte);
+    color: var(--colorEnfasisFuerte);
+    font-family: var(--textTitulos2);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listPage li:hover{
+    background-color: var(--colorEnfasisFuerte);
+    color: var(--colorFondo);
+    cursor: pointer;
+}
+.listPage .active {
+    background-color: var(--colorEnfasisFuerte);
+    color: var(--colorFondo);
+}
 /* ----------------------FOOTER------------------------ */
 
 .container-footer{

@@ -1,70 +1,23 @@
-const cardForm = document.getElementById('cardForm');
+//Importamos mi objeto js con las preguntas
+import { preguntas } from "./data.js";
+
 const cardsContainer = document.getElementById('cardsContainer');
-const cardPregunta = document.querySelector('.cardPregunta');
 const closeForm = document.getElementById('closeForm');
 
-// Almaceno las cards creadas
-let cards = [];
+//variables vaginación
+const limit = 9;
+let thisPage = 1;
 
-//Verifico contenido de mi local storage
-let dataCards = JSON.parse(localStorage.getItem('cards'));
-console.log(dataCards);
+// Almaceno las cards existentes y creadas
+let cards = preguntas;
 
-if (dataCards !== undefined && dataCards !== null){
-  if (dataCards.length>0){
-    for (i = 0; i<dataCards.length ;i++) {
-      cards.push(dataCards[i]);
-      console.log(cards);
-    }
-    renderCards();
-  }
-} else {
-  dataCards = [];
+
+if (cards !== null && cards !== undefined && cards !== ''){
+  renderCards ();
+  loadCard();
 }
-console.log(dataCards);
 
-// Event listener for the form submission
-cardForm.addEventListener('submit', addCard);
 closeForm.addEventListener('click', closingForm);
-
-function closingForm (){
-  const visible = document.querySelector('.d-content');
-  visible.style.visibility = 'hidden';
-}
-
-function addCard (evento) {
-  evento.preventDefault();
-  
-    // Get the form inputs
-    const image = document.getElementById('image').value;
-    // image.onchange = () =>{
-    //   image.src = URL.createObjectURL(image.files[0]);
-    // }
-    console.log(image)
-    const category = document.getElementById('categorie').value;
-    const question = document.getElementById('question').value;
-    const answer = document.getElementById('answer').value;
-    const idCard = generateUniqueID();
-    console.log(idCard);
-
-    if (image === '' || category === '' || question === '' || answer === ''){
-    alert('llene los datos');
-    } else {
-             // Create a new card object
-            const card = { image, category, question, answer, idCard };
-             // Add the card to the array
-            cards.push(card);
-            // guardo arreglo de tarjetas en mi localstorage
-            localStorage.setItem('cards', JSON.stringify(cards));
-            
-            console.log(cards)
-
-            // Clear the form inputs
-            cardForm.reset();
-            // Render the cards
-            renderCards();
-    }  
-}
 
 function renderCards() {
   cardsContainer.innerHTML = '';
@@ -75,56 +28,82 @@ function renderCards() {
          <div class="cardPregunta">
            <div class="container-pregunta">
                <div class="card-Image">
-                   <img src="assets/images/img1.PNG" alt="images-card">
+                   <img src="assets/images/img1.png" alt="images-card">
                    <div class="containerAction">
-                       <img class="edit" src="assets/icons/IconEdit.svg" alt="editIcon" onclick="editCard(${card.idCard})">
-                       <img class="trash" src="assets/icons/IconTrash.svg" alt="trashIcon" onclick="deleteCard(${card.idCard})">
+                       <img class="edit" src="assets/icons/IconEdit.svg" alt="editIcon" onclick="editCard(${card.id})">
+                       <img class="trash" src="assets/icons/IconTrash.svg" alt="trashIcon" onclick="deleteCard(${card.id})">
                    </div>
                </div>
                <div class="card-Pregunta">
-                   <span>${card.category}</span>
-                   <h3>${card.question}.</h3>
-                   <p>${card.answer}.</p>
+                   <span>${card.categoria}</span>
+                   <h3>${card.pregunta}.</h3>
+                   <p>${card.respuesta}.</p>
                </div>
            </div>       
          </div>`;
      });
    }
 
-
-
-function deleteCard(id){
-  if(window.confirm('¿Estas seguro de eliminar esta tarjeta?')){ 
-    cards.forEach((card, index)=>{
-      if(card.idCard == id){
-        cards.splice(index,1);
-        localStorage.setItem('cards', JSON.stringify(cards));
-        renderCards();
+   function loadCard() {
+  
+    let beginGet = limit * (thisPage - 1);
+    let endGet = limit * thisPage - 1;
+  
+    const cards = document.querySelectorAll('.cardPregunta');
+  
+    cards.forEach((card, index) => {
+      if (index >= beginGet && index <= endGet) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
       }
-    })
+    });
+    listPage();
+  };
+
+
+  function changePage(i) {
+      thisPage = i;
+      loadCard();
+      listPage(); // Rebuild the pagination links
   }
-}
+  
+  function listPage() {
+      let count = Math.ceil(cards.length / limit);
+      let listPage = document.querySelector('.listPage');
+      listPage.innerHTML = '';
+  
+      // prev
+      if (thisPage != 1) {
+          let prev = document.createElement('li');
+          prev.innerHTML = 'prev';
+          prev.addEventListener('click', () => changePage(thisPage - 1));
+          listPage.appendChild(prev);
+      }
+  
+      // new
+      for (let i = 1; i <= count; i++) {
+          let nextPage = document.createElement('li');
+          nextPage.innerHTML = i;
+  
+          if (i == thisPage) {
+              nextPage.classList.add('active');
+          }
+          nextPage.addEventListener('click', () => changePage(i));
+          listPage.appendChild(nextPage);
+      }
+  
+      // next
+      if (thisPage != count) {
+          let next = document.createElement('li');
+          next.innerHTML = 'next';
+          next.addEventListener('click', () => changePage(thisPage + 1));
+          listPage.appendChild(next);
+      }
+  }
+  
 
-// function editCard(id){
-//   const image = document.getElementById('image').value;
-//   const category = document.getElementById('categorie').value;
-//   const question = document.getElementById('question').value;
-//   const answer = document.getElementById('answer').value;
-//   cards.forEach((card,index)=>{
-//     if(card.idCard == id){
-//       card.image=image;
-//       card.category=category;
-//       card.question=question;
-//       card.answer=answer;
-//       localStorage.setItem('cards', JSON.stringify(cards));
-//       renderCards();
-//     }
-//   })
-// }
-
-function generateUniqueID() {
-  const timestamp = Date.now().toString();
-  const randomNum = Math.floor(Math.random() * 1000).toString();
-  const uniqueID = timestamp + randomNum;
-  return uniqueID;
-}
+  function closingForm (){
+    const visible = document.querySelector('.d-content');
+    visible.style.visibility = 'hidden';
+  }

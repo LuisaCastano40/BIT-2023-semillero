@@ -113,12 +113,6 @@
                     <div class="closeIcon">
                         <i class='bx bx-x' id="closeForm"></i>
                     </div>
-
-                    <div class="container-imageUp">
-                        <i class='bx bx-cloud-upload'></i>
-                        <label for="image">Subir imagen</label>
-                        <input type="file" id="image">
-                    </div>
                     
                     <input type="text" placeholder="Categoría" id="categorie">
                     <input type="text" id="question" placeholder="Pregunta">
@@ -139,6 +133,16 @@
                     <img src="assets/icons/IconAdd.svg" alt="iconoAdd">
                 </button>
             </article>
+
+            <!-- Inicio paginación -->
+            <article class="container-pagination">
+                <ul class="listPage">
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </article>
+            <!-- Fin paginación -->
 
         </section>
     </main>
@@ -183,6 +187,6 @@
     </footer>
     <!-- Fin pie de página -->
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
