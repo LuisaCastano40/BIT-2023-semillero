@@ -10,6 +10,7 @@
     <!-- Link para íconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <link rel="shortcut icon" href="assets/Logo/Logo.svg" type="image/x-icon">
     <title> Desarrollo web | Semillero BIT </title>
 </head>
 <body>
@@ -72,9 +73,9 @@
         <section class="container-main" id="proyecto">
 
             <!-- Inicio Buscador -->
-            <form class="container-buscador">
+            <form class="container-buscador d-none">
                 <input type="text" id="search" name="search" placeholder="Buscar...">
-                <img src="assets/icons/IconFind.svg" alt="Icon-find">
+                <button id="lookfor"><img src="assets/icons/IconFind.svg" alt="Icon-find"></button>
             </form>
             <!-- Fin Buscador -->
 
@@ -83,24 +84,24 @@
                 <h2>Categorías</h2>
 
                 <article class="categories">
-                    <div class="categories--categorie">
+                    <button class="categories--categorie" id="categorieTec">
                         <img src="assets/icons/IconInternet.svg" alt="iconoWeb">
-                    </div>
-                    <div class="categories--categorie">
+                    </button>
+                    <button class="categories--categorie" id="categorieGit">
                         <img src="assets/icons/IconGit.svg" alt="iconoGit">
-                    </div>
-                    <div class="categories--categorie">
+                    </button>
+                    <button class="categories--categorie" id="categorieHtml">
                         <img src="assets/icons/IconHtml.svg" alt="iconoHtml">
-                    </div>
-                    <div class="categories--categorie">
+                    </button>
+                    <button class="categories--categorie" id="categorieCss">
                         <img src="assets/icons/cssIcon.svg" alt="iconoCss">
-                    </div>
-                    <div class="categories--categorie">
+                    </button>
+                    <button class="categories--categorie" id="categorieJs">
                         <img src="assets/icons/IconJs.svg" alt="iconoCss">
-                    </div>
-                    <div class="categories--categorie">
+                    </button>
+                    <button class="categories--categorie" id="categorieAll">
                         <img src="assets/icons/IconPlus.svg" alt="iconoAll">
-                    </div>
+                    </button>
                 </article>
 
             </article>
@@ -127,7 +128,7 @@
             </article>
             <!-- Fin cards de preguntas -->
 
-            <article class="container-btnAdd">
+            <article class="container-btnAdd" id="btn-Add">
                 <button class="btn-agregar">
                     AGREGAR PREGUNTA
                     <img src="assets/icons/IconAdd.svg" alt="iconoAdd">
@@ -136,11 +137,7 @@
 
             <!-- Inicio paginación -->
             <article class="container-pagination">
-                <ul class="listPage">
-                    <li class="active">1</li>
-                    <li>2</li>
-                    <li>3</li>
-                </ul>
+                <ul class="listPage"></ul>
             </article>
             <!-- Fin paginación -->
 
@@ -172,10 +169,10 @@
                 </div>
                 <div class="container-botones">
                     <button class="btn-portafolio">
-                        <p>PORTAFOLIO</p>
+                        <p><a href="https://luisavanegas-portafolio.netlify.app/" target="_blank">PORTAFOLIO</a></p>
                     </button>
                     <button class="btn-curriculum">
-                        <P>HOJA DE VIDA</P>
+                        <P><a href="https://www.canva.com/design/DAFo3dUtAtk/_v5Qxyg8cUiJ7gAi6xTBGQ/edit" target="_blank">HOJA DE VIDA</a></P>
                     </button>
                 </div>
             </article>

@@ -241,6 +241,9 @@ body::-webkit-scrollbar-track {
 .container-buscador img{
     filter: invert(72%) sepia(59%) saturate(213%) hue-rotate(143deg) brightness(84%) contrast(86%);
 }
+.d-none{
+    display: none;
+}
 
 /* Categorías */
 .container-categories{
@@ -362,7 +365,7 @@ body::-webkit-scrollbar-track {
     box-shadow: var(--shadow2);
 }
 .d-content{
-    visibility: visible;
+    visibility: hidden;
 }
 
 /* Tarjetas de preguntas */
@@ -387,7 +390,7 @@ body::-webkit-scrollbar-track {
 }
 .container-pregunta{
     width: 100%;
-    min-height: 360px;
+    min-height: 380px;
     border: solid 2px rgb(226, 226, 226);
     box-shadow: var(--shadow);
     box-sizing: border-box;
@@ -395,7 +398,6 @@ body::-webkit-scrollbar-track {
     flex-direction: column;
     justify-content: center;
     text-overflow: ellipsis;
-
 }
 .card-Image{
     position: relative;
@@ -457,7 +459,7 @@ body::-webkit-scrollbar-track {
 .card-Pregunta p{
     color: var(--colorTexto);
     font-family: var(--textContenido);
-    font-size: 15px; 
+    font-size: 16px; 
     box-sizing: border-box;
 }
 
@@ -524,6 +526,9 @@ body::-webkit-scrollbar-track {
     background-color: var(--colorEnfasisFuerte);
     color: var(--colorFondo);
 }
+.listPage i{
+    font-size: 25px;
+}
 /* ----------------------FOOTER------------------------ */
 
 .container-footer{
@@ -577,11 +582,14 @@ body::-webkit-scrollbar-track {
     border-radius: 5px;
     border: none;
     background-color: var(--colorEnfasis);
+    box-shadow: var(--shadow);
+}
+.btn-portafolio a, .btn-curriculum a{
     color: white;
     font-family: var(--textTitulos2);
     font-size: 12px;
     font-weight: 600;
-    box-shadow: var(--shadow);
+    text-decoration: none;
 }
 .btn-portafolio:hover, .btn-curriculum:hover{
     cursor: pointer;
@@ -598,4 +606,74 @@ body::-webkit-scrollbar-track {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 5px;
 }
+
+
+/* ----------------------RESPONSIVE------------------- */
+@media (max-width: 1400px) {
+    .container-logo img{
+        bottom: -20px;
+    }
+  }
+@media (max-width: 1024px) {
+    .cardPregunta{
+        width: 45%;
+    }
+  }
+
+@media (max-width: 900px) {
+    .container-decoLetras{
+        display: none;
+    }
+    .baner-image{
+        width: 45%;
+    }
+    .container-categories h2{
+        font-size: 60px;
+    }
+    .categories--categorie{
+        width: 90px;
+        height: 90px;
+    }
+    .categories--categorie img{
+        width: 60px;
+        height: 60px;
+    }
+    .container-btnAdd{
+        width: 70%;
+    }
+  }
+@media (max-width: 600px) {
+    
+    .baner-image{
+        width: 65%;
+        top: 18%;
+        left: 26%;
+    }
+    .cardForm{
+        width: 80%;
+    }
+    .cardPregunta{
+        width: 75%;
+    }
+    .sobremí{
+        flex-direction: column;
+    }
+  }
+@media (max-width: 400px) {
+    .baner-image{
+        height: 80%;
+        left: 20%;
+    }
+    .cardForm input{
+        width: 50%;
+    }
+    .texTareaForm{
+        width: 50%;
+    }
+    .cardPregunta{
+        width: 90%;
+    }
+  }
