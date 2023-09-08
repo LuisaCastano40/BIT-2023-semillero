@@ -55,9 +55,8 @@ function renderCards() {
          <div class="cardPregunta">
            <div class="container-pregunta">
                <div class="card-Image">
-                   <img src="assets/images/img1.png" alt="images-card">
+                   <img src="/assets/images/img1.png" alt="images-card">
                    <div class="containerAction">
-                       <img class="edit" src="assets/icons/IconEdit.svg" alt="editIcon" onclick="editCard(${card.id})">
                        <img class="trash" src="assets/icons/IconTrash.svg" alt="trashIcon" onclick="deleteCard(${card.id})">
                    </div>
                </div>
