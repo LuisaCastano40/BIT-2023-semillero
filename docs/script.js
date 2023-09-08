@@ -1,10 +1,15 @@
 //Importamos mi objeto js con las preguntas
 import { preguntas } from "./data.js";
 
+// Almaceno las cards existentes 
+let cards = preguntas;
+
 
 //Traemos los elementos necesarios del HTML
 const cardsContainer = document.getElementById('cardsContainer');
+const cardForm = document.getElementById('cardForm');
 const closeForm = document.getElementById('closeForm');
+const btnForm = document.getElementById('btnForm');
 const btnAdd = document.getElementById('btn-Add');
 const categorieTec = document.getElementById('categorieTec');
 const categorieGit = document.getElementById('categorieGit');
@@ -17,35 +22,47 @@ const categorieAll = document.getElementById('categorieAll');
 const limit = 9;
 let thisPage = 1;
 
-// Almaceno las cards existentes y creadas
-let cards = preguntas;
+
+//Carga inicial
+document.addEventListener("DOMContentLoaded", () => {
+  renderCards();
+  loadCard();
+  listPage();
+  eventListeners()
+})
 
 
 //Escuchamos los eventos
-closeForm.addEventListener('click', closingForm);
-btnAdd.addEventListener('click', openingForm);
-window.addEventListener('resize', listPage);
-categorieTec.addEventListener('click', () => {
-  filter(1);
-});
-categorieGit.addEventListener('click', () => {
-  filter(2);
-});
-categorieHtml.addEventListener('click', () => {
-  filter(3);
-});
-categorieCss.addEventListener('click', () => {
-  filter(4);
-});
-categorieJs.addEventListener('click', () => {
-  filter(5);
-});
-categorieAll.addEventListener('click', () => {
-  filter(6);
-});
+function eventListeners() {
+  window.addEventListener('resize', listPage);
+  categorieTec.addEventListener('click', () => {
+    filter(1);
+  });
+  categorieGit.addEventListener('click', () => {
+    filter(2);
+  });
+  categorieHtml.addEventListener('click', () => {
+    filter(3);
+  });
+  categorieCss.addEventListener('click', () => {
+    filter(4);
+  });
+  categorieJs.addEventListener('click', () => {
+    filter(5);
+  });
+  categorieAll.addEventListener('click', () => {
+    filter(6);
+  });
+  closeForm.addEventListener('click', closingForm);
+  btnAdd.addEventListener('click', openingForm);
+  btnForm.addEventListener('click', handleAddCard);
+}
 
 
+/*---------------------FUNCIONES---------------------*/
 
+
+//Me crea las cards que hayan almacenadas
 function renderCards() {
   cardsContainer.innerHTML = '';
 
@@ -55,7 +72,7 @@ function renderCards() {
          <div class="cardPregunta">
            <div class="container-pregunta">
                <div class="card-Image">
-                   <img src="/assets/images/img1.png" alt="images-card">
+                   <img src="assets/images/img1.png" alt="images-card">
                    <div class="containerAction">
                        <img class="trash" src="assets/icons/IconTrash.svg" alt="trashIcon" onclick="deleteCard(${card.id})">
                    </div>
@@ -70,6 +87,8 @@ function renderCards() {
   });
 }
 
+
+//M establece cuántas cards se muestran por página
 function loadCard() {
 
   let beginGet = limit * (thisPage - 1);
@@ -85,12 +104,7 @@ function loadCard() {
   listPage();
 };
 
-
-function changePage(i) {
-  thisPage = i;
-  loadCard();
-}
-
+//Paginación
 function listPage() {
   const maxVisibleLinks = calculateMaxVisibleLinks();
   let count = Math.ceil(cards.length / limit);
@@ -130,6 +144,11 @@ function listPage() {
   }
 }
 
+function changePage(i) {
+  thisPage = i;
+  loadCard();
+}
+
 function calculateMaxVisibleLinks() {
   // Calculate the maximum number of visible links based on screen width
   const screenWidth = window.innerWidth;
@@ -143,19 +162,22 @@ function calculateMaxVisibleLinks() {
   }
 }
 
+
+//Apertura y cierre de formulario para agregar cards nuevas
 function closingForm() {
   const visible = document.querySelector('.d-content');
   visible.style.visibility = 'hidden';
 }
-
 function openingForm() {
   const visible = document.querySelector('.d-content');
   visible.style.visibility = 'visible';
 }
 
-function filter(num){
+
+//Filtro por categorías
+function filter(num) {
+
   const cardItems = document.querySelectorAll('.cardPregunta');
-  
 
   cardItems.forEach(cardItem => {
     const cardCategorie = cardItem.querySelector('.categoria');
@@ -173,10 +195,10 @@ function filter(num){
       cardItem.style.display = 'block';
     } else if (num === 6 || !num) {
       cardItem.style.display = 'block';
-        // Update pagination
-          thisPage = 1;
-          loadCard();
-          listPage();
+      // Update pagination
+      thisPage = 1;
+      loadCard();
+      listPage();
     } else {
       cardItem.style.display = 'none';
     }
@@ -184,8 +206,26 @@ function filter(num){
 
 }
 
+//Agregar cards nuevas
+function handleAddCard(e) {
+  e.preventDefault();
+  const category = cardForm.categorie.value;
+  const question = cardForm.question.value;
+  const answer = cardForm.answer.value;
+  let card = {id, category, question, answer};
+  console.log(category, question, answer);
 
-// Initial load
-renderCards();
-loadCard();
-listPage();
+  if (category != '' && question != '' && answer != '') {
+    
+  }
+
+  // if (editId) {
+  //   pprr[parseInt(editId.id)] = { pregunta: question, respuesta: answer}
+  //   editId = false
+  //   textSubmit()
+  // }else {
+  //   pprr.push({ pregunta: question, respuesta: answer});
+  // }
+  // showItems()
+  // $form.reset()
+}
