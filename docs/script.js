@@ -22,14 +22,13 @@ const categorieAll = document.getElementById('categorieAll');
 const limit = 9;
 let thisPage = 1;
 
-
 //Carga inicial
 document.addEventListener("DOMContentLoaded", () => {
   renderCards();
   loadCard();
   listPage();
-  eventListeners()
-})
+  eventListeners();
+});
 
 
 //Escuchamos los eventos
@@ -61,7 +60,6 @@ function eventListeners() {
 
 /*---------------------FUNCIONES---------------------*/
 
-
 //Me crea las cards que hayan almacenadas
 function renderCards() {
   cardsContainer.innerHTML = '';
@@ -73,9 +71,6 @@ function renderCards() {
            <div class="container-pregunta">
                <div class="card-Image">
                    <img src="assets/images/img1.png" alt="images-card">
-                   <div class="containerAction">
-                       <img class="trash" src="assets/icons/IconTrash.svg" alt="trashIcon" onclick="deleteCard(${card.id})">
-                   </div>
                </div>
                <div class="card-Pregunta">
                    <span class="categoria">${card.categoria}</span>
@@ -85,6 +80,7 @@ function renderCards() {
            </div>       
          </div>`;
   });
+
 }
 
 
@@ -209,23 +205,42 @@ function filter(num) {
 //Agregar cards nuevas
 function handleAddCard(e) {
   e.preventDefault();
-  const category = cardForm.categorie.value;
-  const question = cardForm.question.value;
-  const answer = cardForm.answer.value;
-  let card = {id, category, question, answer};
-  console.log(category, question, answer);
 
-  if (category != '' && question != '' && answer != '') {
-    
+  const id = generateUniqueID();
+  const categoria = cardForm.categorie.value;
+  const pregunta = cardForm.question.value;
+  const respuesta = cardForm.answer.value;
+
+  console.log(categoria, pregunta, respuesta);
+
+  if (categoria === '' || pregunta === '' || respuesta === '') {
+    alert('llene los datos');
+  } else {
+    const card = { id, categoria, pregunta, respuesta };
+    cards.unshift(card);
+    cardForm.reset();
+    renderCards();
+    alert('se agregó una nueva tarjeta')
   }
-
-  // if (editId) {
-  //   pprr[parseInt(editId.id)] = { pregunta: question, respuesta: answer}
-  //   editId = false
-  //   textSubmit()
-  // }else {
-  //   pprr.push({ pregunta: question, respuesta: answer});
-  // }
-  // showItems()
-  // $form.reset()
 }
+
+function generateUniqueID() {
+  const timestamp = Date.now().toString();
+  const randomNum = Math.floor(Math.random() * 1000).toString();
+  const uniqueID = timestamp + randomNum;
+  return uniqueID;
+}
+
+// Eliminar cards
+// function deleteCard(id) {
+//   console.log('me están llamando')
+  
+//     if(window.confirm('¿Estas seguro de eliminar esta tarjeta?')){ 
+//       cards.forEach((card, index)=>{
+//         if(card.id == id){
+//           cards.splice(index,1);
+//         }
+//       });
+//       renderCards();
+//     }
+//   }
