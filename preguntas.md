@@ -1,0 +1,106 @@
+- ¿Qué es dispositivo?
+- ¿Qué es hardware?
+- ¿Qué es software?
+- ¿Qué es sistema operativo?
+- ¿Qué es aplicación?
+- ¿Qué es estructura de archivos y carpetas?
+- ¿Qué es interfaz gráfica?
+- ¿Qué es interfaz de línea de comandos?
+- ¿Qué es internet?
+- ¿Qué es web?
+- ¿Qué es navegador web?
+- ¿Qué es página web?
+- ¿Qué es sitio web?
+- ¿Qué es aplicación web?
+- ¿Qué es buscador web?
+- ¿Qué es desarrollo web?
+- ¿Qué es modelo cliente - servidor?
+- ¿Qué pasa cuando navego a: “https://bit.institute”?
+- ¿Qué es editor de código?
+- ¿Qué es sintaxis?
+- ¿Qué es comentario?
+- ¿Qué es palabra clave?
+- ¿Qué es herencia?
+- ¿Qué es sobreescritura?
+- ¿Qué son las convenciones?
+- ¿Qué son las buenas prácticas?
+- ¿Qué es sistema de control de versiones?
+- ¿Qué es alojamiento de control de versiones?
+- ¿Qué es repositorio?
+- ¿Qué es rama?
+- ¿Qué es MARKDOWN?
+- ¿Qué es README.md?
+- ¿Qué es HTML?
+- ¿Qué es etiqueta?
+- ¿Qué es metadata?
+- ¿Qué es jerarquía?
+- ¿Qué es accesibilidad?
+- ¿Qué es SEO?
+- ¿Qué es CSS?
+- ¿Qué es implementar?
+- ¿Qué es regla?
+- ¿Qué es especificidad?
+- ¿Qué es selector?
+- ¿Qué es agrupación de selectores?
+- ¿Qué es modelo de caja?
+- ¿Qué es unidad?
+- ¿Qué es pseudo elemento?
+- ¿Qué es pseudo clase?
+- ¿Qué es propiedad personalizada?
+- ¿Qué es layout?
+- ¿Qué es responsivo?
+- ¿Qué es adaptativo?
+- ¿Qué es primer enfoque?
+- ¿Qué es interfaz de usuario?
+- ¿Qué es experiencia de usuario?
+- ¿Qué es solución de problemas?
+- ¿Qué es lógica?
+- ¿Qué es algoritmo?
+- ¿Qué es metodología de desarrollo?
+- ¿Qué es lenguaje de programación?
+- ¿Qué es motor de JavaScript?
+- ¿Qué es implementar JavaScript?
+- ¿Qué es un script?
+- ¿Qué es etiqueta script?
+- ¿Qué es etiqueta noscript?
+- ¿Qué es el objeto window?
+- ¿Qué es interacción?
+- ¿Qué es declaración?
+- ¿Qué es variable?
+- ¿Qué es constante?
+- ¿Qué es ámbito de las variables?
+- ¿Qué es modo estricto?
+- ¿Qué es tipos de dato primitivos?
+- ¿Qué es operador typeof?
+- ¿Qué es conversión de tipos?
+- ¿Qué es operadores?
+- ¿Qué es control de flujo?
+- ¿Qué es estructuras de control?
+- ¿Qué es "Truthy" y "Falsy"?
+- ¿Qué es estructura de datos?
+- ¿Qué es arreglo?
+- ¿Qué es objeto?
+- ¿Qué es operador instanceof?
+- ¿Qué es funcion?
+- ¿Qué es parámetro?
+- ¿Qué es argumento?
+- ¿Qué es retorno?
+- ¿Qué es hoisting?
+- ¿Qué es "This"?
+- ¿Qué es Scope?
+- ¿Qué es destructurar?
+- ¿Qué es rest argumentos?
+- ¿Qué es operador Spread?
+- ¿Qué es sincrónico?
+- ¿Qué es asíncrono?
+- ¿Qué es promesa?
+- ¿Qué es manejo de errores?
+- ¿Qué es API?
+- ¿Qué es web APIs?
+- ¿Qué es evento?
+- ¿Qué es IIFE
+- ¿Qué es JSON?
+- ¿Qué es serialización?
+- ¿Qué es deserialización?
+- ¿Qué es web storage API?
+- ¿Qué es modularización?
