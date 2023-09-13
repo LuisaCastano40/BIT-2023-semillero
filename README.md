@@ -17,15 +17,15 @@ Formación técnica: Fecha de finalización: 2023/08/31
 ### Proyectos
 1. La gruía del Desarrollador web (Requerido)  
 Proyecto web donde se dio respuesta a cada una de las [preguntas dadas](/preguntas.md).  
-| ![Mockup-Desktop](docs/assets/Mockup/Desktop.png) |
+ ![Mockup-Desktop](docs/assets/Mockup/Desktop.png) 
 
 2. Calculadora básica (Opcional)  
 Proyecto web donde un usuario podrá realizar operaciones aritméticas básicas.
-| ![Mockup-Calculator](Calculadora/mockUp.png) |
+ ![Mockup-Calculator](Calculadora/mockUp.png) 
 
 3. Página de una boda. Trabajo colaborativo (Opcional)
 Proyecto web enfocado en el trabajo colaborativo, donde se practicó el manejo de ramas y el merge a la rama principal.
-| ![Mockup-WeddingPage](mockUp_Boda.png) |
+ ![Mockup-WeddingPage](mockUp_Boda.png) 
 ---
 ### [Página del trabajo final](https://guia-web-dev.netlify.app/)
 ---
