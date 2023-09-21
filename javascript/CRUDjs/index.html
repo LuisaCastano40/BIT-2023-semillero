@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo CRUD</title>
+
+    <style>
+        .btn{
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .btn-update{
+            background-color: lightskyblue;
+        }
+        .btn-delete{
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>CRUD (create, read, update, delete)</h1>
+    <hr>
+    <ol id="list"></ol>
+    <hr>
+    <form id="form">
+        <input name="pregunta" type="text" placeholder="pregunta">
+        <input name="respuesta" type="text" placeholder="respuesta">
+        <button class="btn" name="submit">agregar</button>
+    </form>
+    <hr>
+    <script src="script.js"></script>
+</body>
+</html>
